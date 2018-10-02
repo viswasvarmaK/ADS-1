@@ -50,21 +50,26 @@ class Team implements Comparable <Team> {
 }
 class Selection	{
 	public boolean LessThan(Comparable element1, Comparable element2) {
-		return (element1.compareTo(element2) < 0);
+		return element1.compareTo(element2) < 0;
 	}
 	public void exchange(Comparable []a, int index1, int index2) {
 		Comparable temp = a[index1];
 		a[index1] = a[index2];
 		a[index2] = temp;
 	}
-	public Comparable[] sort(Comparable a[]) {
+	public void sort(Comparable a[]) {
 		// Comparable min = a[i];
-		for (int i = 0; i < a.length; i++) {
-			if (LessThan(a[i+1], a[i])) {
-				exchange(a, i+1, i);
+		int N = a.length;
+		for(int i = 0; i < N; i++) {
+			for (int j = i; j > 0; j--) {
+				if (LessThan(a[j], a[j-1])) {
+					exchange(a, j, j-1);
+				}
+				else {
+					break;
+				}
 			}
 		}
-		return a;
 	}
 	public int min(Comparable []a, int i) {
 		Comparable min = a[i];
@@ -100,6 +105,8 @@ class Solution {
 		}
 		// String[] str = sb.toString().split("::");
 		Selection s = new Selection();
-		System.out.println(Arrays.toString(s.sort(teamArr)));
+		s.sort(teamArr);
+		String output = Arrays.toString(teamArr);
+		System.out.println(output);
 	}
 }
