@@ -1,7 +1,7 @@
 /**.
- * Class for selection.
+ * Class for Insertion.
  */
-class Selection	{
+class Insertion	{
 	/**
 	 * { compares two elements in an array }
 	 *
