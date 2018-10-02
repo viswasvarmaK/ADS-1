@@ -36,12 +36,12 @@ class Team implements Comparable <Team> {
 		this.draws = draws;
 	}
 	public int compareTo(Team that) {
-		if (this.wins > that.wins) return 1;
-		if(this.wins < that.wins)  return -1;
-		if (this.losses > that.losses) return -1;
-		if(this.losses < that.losses) return 1;
-		if(this.draws > that.draws) return 1;
-		if(this.draws < that.draws) return -1;
+		if (this.wins > that.wins) return -1;
+		if(this.wins < that.wins)  return 1;
+		if (this.losses < that.losses) return -1;
+		if(this.losses > that.losses) return 1;
+		if(this.draws > that.draws) return -1;
+		if(this.draws < that.draws) return 1;
 		return 0;
 	}
 	public String toString(){
