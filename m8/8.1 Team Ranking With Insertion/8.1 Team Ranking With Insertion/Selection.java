@@ -30,17 +30,16 @@ class Selection	{
 	 * complexity N**2
 	 */
 	public void sort(Comparable a[]) {
-		// Comparable min = a[i];
 		int N = a.length;
 		for(int i = 0; i < N; i++) {
-			for (int j = i; j > 0; j--) {
-				if (LessThan(a[j], a[j-1])) {
-					exchange(a, j, j-1);
-				}
-				else {
-					break;
+			int min = i;
+			for (int j = i + 1; j < N; j++) {
+				if (LessThan(a[j], a[min])) {
+					// exchange(a, j, j-1);
+					min = j;
 				}
 			}
+			exchange(a, i, min);
 		}
 	}
 	// public int min(Comparable []a, int i) {
