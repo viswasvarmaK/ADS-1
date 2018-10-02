@@ -61,7 +61,7 @@ class Selection	{
 		// Comparable min = a[i];
 		for (int i = 0; i < a.length; i++) {
 			if (LessThan(a[i+1], a[i])) {
-				exchange(a, i, i-1);
+				exchange(a, i+1, i);
 			}
 		}
 		return a;
