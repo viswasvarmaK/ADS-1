@@ -107,7 +107,7 @@ class Solution {
 		Selection s = new Selection();
 		s.sort(teamArr);
 		String output = Arrays.toString(teamArr);
-		String op = output.replace("[","").replace("]","").replace(", ","");
+		String op = output.replace("[","").replace("]","").replace(" ","");
 		System.out.println(op);
 	}
 }
