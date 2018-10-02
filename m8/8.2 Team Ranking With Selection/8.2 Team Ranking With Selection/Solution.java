@@ -39,7 +39,7 @@ public final class Solution {
                Integer.parseInt(teamTockens[t]));
         }
         // String[] str = sb.toString().split("::");
-        Insertion s = new Insertion();
+        Selection s = new Selection();
         s.sort(teamArr);
         String output = Arrays.toString(teamArr);
         String op =
