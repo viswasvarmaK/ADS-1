@@ -59,8 +59,8 @@ class Selection	{
 	}
 	public Comparable[] sort(Comparable a[]) {
 		// Comparable min = a[i];
-		for (int i = 1; i < a.length; i++) {
-			if (LessThan(a[i], a[i-1])) {
+		for (int i = 0; i < a.length; i++) {
+			if (LessThan(a[i+1], a[i])) {
 				exchange(a, i, i-1);
 			}
 		}
