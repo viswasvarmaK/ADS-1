@@ -3,11 +3,11 @@ import	java.util.Scanner;
 /**
  * Class for solution.
  */
-class Solution {
+public class Solution {
 	/**
 	 * Constructs the object.
 	 */
-	Solution() {
+	private Solution() {
 
 	}
 	/**.
@@ -35,7 +35,8 @@ class Solution {
 			String[] teamTockens = inputLines[i].split(",");
 			teamArr[i] = new Team(teamTockens[p],
 			 Integer.parseInt(teamTockens[q]),
-			  Integer.parseInt(teamTockens[r]), Integer.parseInt(teamTockens[t]));
+			  Integer.parseInt(teamTockens[r]),
+			   Integer.parseInt(teamTockens[t]));
 		}
 		// String[] str = sb.toString().split("::");
 		Selection s = new Selection();
