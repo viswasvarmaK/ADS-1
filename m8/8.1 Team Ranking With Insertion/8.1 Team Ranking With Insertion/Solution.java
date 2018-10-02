@@ -87,27 +87,39 @@ class Solution {
 	Solution(){
 
 	}
+	/**
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		// StringBuffer sb = new StringBuffer();
 		String input = "";
 		// int count = 0;
-		while(scan.hasNextLine()) {
+		while (scan.hasNextLine()) {
 			// sb.append(scan.nextLine() + "::");
 			input += scan.nextLine() + "::";
-			// count++;	
+			// count++;
 		}
 		String[] inputLines = input.split("::");
 		Team[] teamArr = new Team[inputLines.length];
-		for (int i=0;i<teamArr.length;i++){
+		final int p = 0;
+		final int q = 1;
+		final int r = 2;
+		final int t = 3;
+		for (int i = 0; i < teamArr.length; i++){
 			String[] teamTockens = inputLines[i].split(",");
-			teamArr[i] = new Team(teamTockens[0], Integer.parseInt(teamTockens[1]), Integer.parseInt(teamTockens[2]), Integer.parseInt(teamTockens[3]));
+			teamArr[i] = new Team(teamTockens[p], Integer.parseInt
+				(teamTockens[q]), Integer.parseInt(teamTockens[r]),
+				 Integer.parseInt(teamTockens[t]));
 		}
 		// String[] str = sb.toString().split("::");
 		Selection s = new Selection();
 		s.sort(teamArr);
 		String output = Arrays.toString(teamArr);
-		String op = output.replace("[","").replace("]","").replace(" ","");
+		String op = output.replace("[", "").replace
+		("]", "").replace(" ", "");
 		System.out.println(op);
 	}
 }
