@@ -1,10 +1,16 @@
 import	java.util.Arrays;
 import	java.util.Scanner;
+/**
+ * Class for solution.
+ */
 class Solution {
-	Solution(){
+	/**
+	 * Constructs the object.
+	 */
+	Solution() {
 
 	}
-	/**
+	/**.
 	 * { function_description }
 	 *
 	 * @param      args  The arguments
@@ -29,13 +35,14 @@ class Solution {
 			String[] teamTockens = inputLines[i].split(",");
 			teamArr[i] = new Team(teamTockens[p],
 			 Integer.parseInt(teamTockens[q]),
-			  Integer.parseInt(teamTockens[r]),Integer.parseInt(teamTockens[t]));
+			  Integer.parseInt(teamTockens[r]), Integer.parseInt(teamTockens[t]));
 		}
 		// String[] str = sb.toString().split("::");
 		Selection s = new Selection();
 		s.sort(teamArr);
 		String output = Arrays.toString(teamArr);
-		String op = output.replace("[", "").replace("]", "").replace(" ", "");
+		String op =
+		 output.replace("[", "").replace("]", "").replace(" ", "");
 		System.out.println(op);
 	}
 }
