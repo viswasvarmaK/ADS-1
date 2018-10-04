@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**.
  * Class for linked list stack of strings.
  */
-class LinkedListStackOfStrings {
+class Stack {
     /**.
      * { var_description }
      */
@@ -66,8 +66,11 @@ class LinkedListStackOfStrings {
      *
      * @return     { description_of_the_return_value }
      */
-    public char pop() {
-        char item = first.item;
+    public char pop() throws Exception{
+    	if (first == null) {
+    		throw new Exception ("Stack is empty");
+    	}
+    	char item = first.item;
         first = first.nextAddress;
         return item;
     }
@@ -93,19 +96,24 @@ final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(final String[] args) {
+    public static void main(final String[] args) throws Exception {
         /**.
          * { item_description }
          */
         Scanner sc = new Scanner(System.in);
         int size = Integer.parseInt(sc.nextLine());
         for (int i = 0; i < size; i++) {
-            String line = sc.next();
-            if (checkingTheParanthesis(line)) {
+            String line = sc.next(); 
+            try {
+            if (ISParanthesisBalanced(line)) {
                 System.out.println("YES");
             } else {
                 System.out.println("NO");
             }
+        	}
+        	catch (Exception e) {
+        		System.out.println(e.getMessage());
+        	}
         }
     }
 
@@ -116,7 +124,7 @@ final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static boolean checkingTheParanthesis(final String s) {
+    public static boolean ISParanthesisBalanced(final String s) {
         /**.
          * { var_description }
          */
