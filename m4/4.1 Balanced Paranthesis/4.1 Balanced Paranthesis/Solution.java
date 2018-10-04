@@ -66,9 +66,9 @@ class Stack {
      *
      * @return     { description_of_the_return_value }
      */
-    public char pop() throws Exception{
+    public char pop() throws Exception {
     	if (first == null) {
-    		throw new Exception ("Stack is empty");
+    		throw new Exception("Stack is empty");
     	}
     	char item = first.item;
         first = first.nextAddress;
