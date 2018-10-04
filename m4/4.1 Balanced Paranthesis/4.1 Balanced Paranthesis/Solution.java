@@ -103,7 +103,7 @@ final class Solution {
         Scanner sc = new Scanner(System.in);
         int size = Integer.parseInt(sc.nextLine());
         for (int i = 0; i < size; i++) {
-            String line = sc.next(); 
+            String line = sc.next();
             try {
             if (ISParanthesisBalanced(line)) {
                 System.out.println("YES");
@@ -113,9 +113,9 @@ final class Solution {
         	}
         	catch (Exception e) {
         		System.out.println(e.getMessage());
-        	}
         }
     }
+}
 
     /**.
      * { function_description }
