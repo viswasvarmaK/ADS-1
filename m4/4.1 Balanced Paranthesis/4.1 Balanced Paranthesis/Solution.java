@@ -60,7 +60,7 @@ class Stack {
         first.item = item;
         first.nextAddress = oldfirst;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @return     { description_of_the_return_value }
@@ -92,7 +92,7 @@ final class Solution {
      * { item_description }
      */
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      args       The arguments
