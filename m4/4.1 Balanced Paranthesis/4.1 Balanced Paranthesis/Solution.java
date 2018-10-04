@@ -108,11 +108,12 @@ final class Solution {
         for (int i = 0; i < size; i++) {
             String line = sc.next();
             try {
-            if (IsParanthesisBalanced(line)) {
-                System.out.println("YES");
-            } else {
-                System.out.println("NO");
-            }
+                if (IsParanthesisBalanced(line)) {
+                    System.out.println("YES");
+                } 
+                else {
+                    System.out.println("NO");
+                }
             }
             catch (Exception e) {
                 System.out.println(e.getMessage());
