@@ -110,8 +110,7 @@ final class Solution {
             try {
                 if (IsParanthesisBalanced(line)) {
                     System.out.println("YES");
-                } 
-                else {
+                } else {
                     System.out.println("NO");
                 }
             }
