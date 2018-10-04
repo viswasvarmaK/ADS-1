@@ -60,17 +60,18 @@ class Stack {
         first.item = item;
         first.nextAddress = oldfirst;
     }
-
-    /**.
+    /**
      * { function_description }
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
      */
     public char pop() throws Exception {
-    	if (first == null) {
-    		throw new Exception("Stack is empty");
-    	}
-    	char item = first.item;
+        if (first == null) {
+            throw new Exception("Stack is empty");
+        }
+        char item = first.item;
         first = first.nextAddress;
         return item;
     }
@@ -91,10 +92,12 @@ final class Solution {
      * { item_description }
      */
     }
-    /**.
+    /**
      * { function_description }
      *
-     * @param      args  The arguments
+     * @param      args       The arguments
+     *
+     * @throws     Exception  { exception_description }
      */
     public static void main(final String[] args) throws Exception {
         /**.
@@ -110,9 +113,9 @@ final class Solution {
             } else {
                 System.out.println("NO");
             }
-        	}
-        	catch (Exception e) {
-        		System.out.println(e.getMessage());
+            }
+            catch (Exception e) {
+                System.out.println(e.getMessage());
         }
     }
 }
