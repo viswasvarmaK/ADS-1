@@ -108,7 +108,7 @@ final class Solution {
         for (int i = 0; i < size; i++) {
             String line = sc.next();
             try {
-            if (ISParanthesisBalanced(line)) {
+            if (IsParanthesisBalanced(line)) {
                 System.out.println("YES");
             } else {
                 System.out.println("NO");
@@ -127,7 +127,7 @@ final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static boolean ISParanthesisBalanced(final String s) {
+    public static boolean IsParanthesisBalanced(final String s) {
         /**.
          * { var_description }
          */
