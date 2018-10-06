@@ -7,10 +7,10 @@ public class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    public Solution() {
 
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      args  The arguments
