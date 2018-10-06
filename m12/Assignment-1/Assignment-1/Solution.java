@@ -1,38 +1,49 @@
-import java.util.*;
+import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Class for solution.
+ */
 public class Solution {
-	Solution() {
+    /**
+     * Constructs the object.
+     */
+    Solution() {
 
-	}
-	public static void main(final String[] args) {
-		Scanner scan = new Scanner(System.in);
-		String userinput = "";
-		while (scan.hasNextLine()) {
+    }
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String userinput = "";
+        while (scan.hasNextLine()) {
             userinput += scan.nextLine();
-		int lines =	Integer.parseInt(scan.nextLine());
-		int vacancies = Integer.parseInt(scan.nextLine());
-		int notresv = Integer.parseInt(scan.nextLine());
-		int bc = Integer.parseInt(scan.nextLine());
-		int sc = Integer.parseInt(scan.nextLine());
-		int st = Integer.parseInt(scan.nextLine());
-	    }
-	// 	while(scan.hasNext()) {
-	// 		String[] studentTokens = scan.nextLine().split(",");
-	// 		Students s = new Students(studentTokens[0],
-	// 		Integer.parseInt(studentTokens[1]),
-	// 		 Integer.parseInt(studentTokens[2]),
-	// 		  Integer.parseInt(studentTokens[3]),
-	// 		   Integer.parseInt(studentTokens[4]),
-	// 		    Integer.parseInt(studentTokens[5]),
-	// 		     studentTokens[6]);
-	// 	}
-	// 	Sorting sort = new Sorting();
-	// 	sort.sort(studentname);
-	// 	String display = Arrays.toString(studentname);
-	// 	System.out.println(display);
-	// 	String userinput = "";
+        int lines = Integer.parseInt(scan.nextLine());
+        int vacancies = Integer.parseInt(scan.nextLine());
+        int notresv = Integer.parseInt(scan.nextLine());
+        int bc = Integer.parseInt(scan.nextLine());
+        int sc = Integer.parseInt(scan.nextLine());
+        int st = Integer.parseInt(scan.nextLine());
+        }
+    //  while(scan.hasNext()) {
+    //      String[] studentTokens = scan.nextLine().split(",");
+    //      Students s = new Students(studentTokens[0],
+    //      Integer.parseInt(studentTokens[1]),
+    //       Integer.parseInt(studentTokens[2]),
+    //        Integer.parseInt(studentTokens[3]),
+    //         Integer.parseInt(studentTokens[4]),
+    //          Integer.parseInt(studentTokens[5]),
+    //           studentTokens[6]);
+    //  }
+    //  Sorting sort = new Sorting();
+    //  sort.sort(studentname);
+    //  String display = Arrays.toString(studentname);
+    //  System.out.println(display);
+    //  String userinput = "";
         // String[] inputLines = userinput.split("::");
-		while (scan.hasNextLine()) {
+        while (scan.hasNextLine()) {
             userinput += scan.nextLine() + "::";
         }
         String[] inputLines = userinput.split("::");
@@ -55,5 +66,5 @@ public class Solution {
         sort.sort(studentArr);
         String display = Arrays.toString(studentArr);
         System.out.println(display);
-	}
+    }
 }
