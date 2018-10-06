@@ -109,6 +109,10 @@ public class Solution {
                 Integer.parseInt(studentTockens[4]),
                  Integer.parseInt(studentTockens[5]),
                    studentTockens[6]);
+        String[] dob = studentTockens[1].split("-");
+        int day = Integer.parseInt(dob[0]);
+        int month = Integer.parseInt(dob[1]);
+        int year = Integer.parseInt(dob[2]);  
         }
         Sorting sort = new Sorting();
         sort.sort(studentArr);
