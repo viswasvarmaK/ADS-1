@@ -32,7 +32,10 @@ public final class Solution {
         int notresv = Integer.parseInt(scan.nextLine());
         int bc = Integer.parseInt(scan.nextLine());
         int sc = Integer.parseInt(scan.nextLine());
+        System.out.println("hii");
         int st = Integer.parseInt(scan.nextLine());
+        System.out.println("hii");
+
         while (scan.hasNextLine()) {
             userinput += scan.nextLine() + "::";
         }
@@ -61,3 +64,41 @@ public final class Solution {
         System.out.println(display);
     }
 }
+// public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         String userinput = "";
+//         int n = 6;
+//         int i = 0;
+//         while (scan.hasNextLine() && i < n) {
+//             String[] studentTockens; = inputLines[i].split(",");
+//             studentArr[i] = new Students(Integer.parseInt(studentTockens[p]),
+//              Integer.parseInt(studentTockens[q]),
+//               Integer.parseInt(studentTockens[r]),
+//                Integer.parseInt(studentTockens[s]),
+//                 Integer.parseInt(studentTockens[t]),
+//                  Integer.parseInt(studentTockens[u]));
+//         }
+
+
+//         while (scan.hasNextLine()) {
+//             userinput += scan.nextLine() + "::";
+//         }
+//         String[] inputLines = userinput.split("::");
+//         Players[] playersArr = new Players[inputLines.length];
+//         for (int i = 0; i < n; i++) {
+//             String[] playersTockens = inputLines[i].split(",");
+//             playersArr[i] = new Players(playersTockens[0],
+//              Integer.parseInt(playersTockens[1]),
+//               Integer.parseInt(playersTockens[2]),
+//                Integer.parseInt(playersTockens[3]),
+//                 Integer.parseInt(playersTockens[4]),
+//                  Integer.parseInt(playersTockens[5]),
+//                   Integer.parseInt(playersTockens[6]),
+//                    Integer.parseInt(playersTockens[7]));
+//         }
+//         Sorting sort = new Sorting();
+//         sort.sort(playersArr);
+//         String display = Arrays.toString(playersArr);
+//         System.out.println(display);
+
+//     }
