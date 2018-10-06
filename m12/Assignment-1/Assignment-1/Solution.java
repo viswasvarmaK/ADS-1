@@ -48,10 +48,12 @@ public final class Solution {
                 Integer.parseInt(studentTockens[t]),
                  Integer.parseInt(studentTockens[u]),
                    studentTockens[v]);
+            System.out.println("hii");
         String[] dob = studentTockens[1].split("-");
         int day = Integer.parseInt(dob[0]);
         int month = Integer.parseInt(dob[1]);
         int year = Integer.parseInt(dob[2]);
+        System.out.println("hii");
         }
         Sorting sort = new Sorting();
         sort.sort(studentArr);
