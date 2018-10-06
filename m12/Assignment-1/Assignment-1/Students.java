@@ -43,7 +43,9 @@ class Students implements Comparable <Students>{
 		if (this.day < that.day)  return 1;
 
 		return 0;
-
+	}
+	public String toString(){
+		return this.studentname;
 	}
 
 }
