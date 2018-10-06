@@ -33,9 +33,9 @@ public final class Solution {
         int bc = Integer.parseInt(scan.nextLine());
         int sc = Integer.parseInt(scan.nextLine());
         int st = Integer.parseInt(scan.nextLine());
-        }
         while (scan.hasNextLine()) {
             userinput += scan.nextLine() + "::";
+        }
         }
         String[] inputLines = userinput.split("::");
         Students[] studentArr = new Students[inputLines.length];
