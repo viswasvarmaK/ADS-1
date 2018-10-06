@@ -3,7 +3,7 @@ import java.util.Arrays;
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -18,6 +18,13 @@ public class Solution {
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         String userinput = "";
+        final int p = 0;
+        final int q = 1;
+        final int r = 2;
+        final int s = 3;
+        final int t = 4;
+        final int u = 5;
+        final int v = 6;
         while (scan.hasNextLine()) {
             userinput += scan.nextLine();
         int lines = Integer.parseInt(scan.nextLine());
@@ -27,22 +34,6 @@ public class Solution {
         int sc = Integer.parseInt(scan.nextLine());
         int st = Integer.parseInt(scan.nextLine());
         }
-    //  while(scan.hasNext()) {
-    //      String[] studentTokens = scan.nextLine().split(",");
-    //      Students s = new Students(studentTokens[0],
-    //      Integer.parseInt(studentTokens[1]),
-    //       Integer.parseInt(studentTokens[2]),
-    //        Integer.parseInt(studentTokens[3]),
-    //         Integer.parseInt(studentTokens[4]),
-    //          Integer.parseInt(studentTokens[5]),
-    //           studentTokens[6]);
-    //  }
-    //  Sorting sort = new Sorting();
-    //  sort.sort(studentname);
-    //  String display = Arrays.toString(studentname);
-    //  System.out.println(display);
-    //  String userinput = "";
-        // String[] inputLines = userinput.split("::");
         while (scan.hasNextLine()) {
             userinput += scan.nextLine() + "::";
         }
@@ -50,13 +41,13 @@ public class Solution {
         Students[] studentArr = new Students[inputLines.length];
         for (int i = 0; i < studentArr.length; i++) {
             String[] studentTockens = inputLines[i].split(",");
-            studentArr[i] = new Students(studentTockens[0],
-             Integer.parseInt(studentTockens[1]),
-              Integer.parseInt(studentTockens[2]),
-               Integer.parseInt(studentTockens[3]),
-                Integer.parseInt(studentTockens[4]),
-                 Integer.parseInt(studentTockens[5]),
-                   studentTockens[6]);
+            studentArr[i] = new Students(studentTockens[p],
+             Integer.parseInt(studentTockens[q]),
+              Integer.parseInt(studentTockens[r]),
+               Integer.parseInt(studentTockens[s]),
+                Integer.parseInt(studentTockens[t]),
+                 Integer.parseInt(studentTockens[u]),
+                   studentTockens[v]);
         String[] dob = studentTockens[1].split("-");
         int day = Integer.parseInt(dob[0]);
         int month = Integer.parseInt(dob[1]);
