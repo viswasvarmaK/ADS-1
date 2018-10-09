@@ -16,7 +16,7 @@ class Solution {
 			} else {
 				maxpq.insert(s);
 			}
-		}
+		
 		if (maxpq.size() - minpq.size() > 1) {
 			float x = maxpq.delMax();
 			minpq.insert(x);
@@ -38,5 +38,5 @@ class Solution {
 			System.out.println(median);
 		}
 	}
-}	
+}	}
 
