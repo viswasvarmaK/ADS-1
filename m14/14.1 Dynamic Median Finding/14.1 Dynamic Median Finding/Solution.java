@@ -20,15 +20,18 @@ class Solution {
 		if (maxpq.size() - minpq.size() > 1) {
 			float x = maxpq.delMax();
 			minpq.insert(x);
-		} else {
+		}
+		if (minpq.size() - maxpq.size() > 1){
 			float y = minpq.delMin();
 			maxpq.insert(y);
 		}
 		if (minpq.size() == maxpq.size()) {
 			median = (minpq.min() + maxpq.max()) / 2;
+			System.out.println(median);
 		}
 		if (maxpq.size() > minpq.size()) {
 			median = maxpq.max();
+			System.out.println(median);
 		}
 		if (minpq.size() > maxpq.size()) {
 			median = minpq.min();
