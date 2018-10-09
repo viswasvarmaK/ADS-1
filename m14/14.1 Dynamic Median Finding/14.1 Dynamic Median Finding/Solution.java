@@ -9,7 +9,7 @@ class Solution {
 		MinPQ<Float> minpq = new MinPQ<Float>(numbers);
 		MaxPQ<Float> maxpq = new MaxPQ<Float>(numbers);
 		Float median = 0.0f;
-		for (int i = 0; i <= numbers; i++) {
+		for (int i = 0; i < numbers; i++) {
 			float s = scan.nextFloat();
 			if (i > median) {
 				minpq.insert(s);
