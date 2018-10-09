@@ -5,7 +5,7 @@ class Solution {
 	}
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		int numbers = Integer.parseInt(scan.nextLine());
+		int numbers = scan.nextInt();
 		MinPQ<Float> minpq = new MinPQ<Float>(numbers);
 		MaxPQ<Float> maxpq = new MaxPQ<Float>(numbers);
 		float median = 0.0f;
