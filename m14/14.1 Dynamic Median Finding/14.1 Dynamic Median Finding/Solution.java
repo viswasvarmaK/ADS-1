@@ -37,10 +37,6 @@ class Solution {
 			median = minpq.min();
 			System.out.println(median);
 		}
-		// Float[] arr  = new Float[numbers];
-		// for (int i = 0; i < numbers; i++) {
-		// 	arr[i] = Float.parseFloat(scan.nextLine());
-		// 	System.out.println(arr[i]);
 	}
 }	
 
