@@ -11,7 +11,7 @@ class Solution {
 		Float median = 0.0f;
 		for (int i = 0; i < numbers; i++) {
 			float s = scan.nextFloat();
-			if (i > median) {
+			if (s > median) {
 				minpq.insert(s);
 			} else {
 				maxpq.insert(s);
