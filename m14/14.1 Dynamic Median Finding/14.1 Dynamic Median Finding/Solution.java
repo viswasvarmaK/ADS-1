@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * main class that reads the input file.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
