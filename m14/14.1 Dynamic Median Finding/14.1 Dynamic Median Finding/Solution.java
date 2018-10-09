@@ -1,9 +1,18 @@
-import java.util.*;
+/**
+ * { item_description }
+ */
+import java.util.Scanner;
+/**
+ * main class that reads the input file.
+ */
 class Solution {
+	/**
+	 * Constructs the object.
+	 */
 	Solution() {
 
 	}
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int numbers = scan.nextInt();
 		MinPQ<Float> minpq = new MinPQ<Float>(numbers);
