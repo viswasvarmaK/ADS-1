@@ -32,6 +32,7 @@ class Solution {
 		}
 		if (minpq.size() > maxpq.size()) {
 			median = minpq.min();
+			System.out.println(median);
 		}
 		// Float[] arr  = new Float[numbers];
 		// for (int i = 0; i < numbers; i++) {
