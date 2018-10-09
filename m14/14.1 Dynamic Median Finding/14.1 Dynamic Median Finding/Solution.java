@@ -8,7 +8,7 @@ class Solution {
 		int numbers = Integer.parseInt(scan.nextLine());
 		MinPQ<Float> minpq = new MinPQ<Float>(numbers);
 		MaxPQ<Float> maxpq = new MaxPQ<Float>(numbers);
-		Float median = 0.0f;
+		float median = 0.0f;
 		for (int i = 0; i < numbers; i++) {
 			float s = scan.nextFloat();
 			if (s > median) {
