@@ -22,8 +22,8 @@ public final class Solution {
 	 */
 	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
-		int N1 = scan.nextInt();
-		int M1 = scan.nextInt();
-		System.out.println(Taxicab.findTaxicab(N1, M1));
+		int N = scan.nextInt();
+		int M = scan.nextInt();
+		System.out.println(Taxicab.findTaxicab(N, M));
 	}
 }
