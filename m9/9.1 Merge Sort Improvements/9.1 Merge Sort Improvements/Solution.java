@@ -29,6 +29,7 @@ public final class Solution {
             //System.out.println(" String Arrays" +str[i]);
             MergeSort.sort(str);
             System.out.println(Arrays.toString(str));
+            System.out.println();
         }
     }
 }
