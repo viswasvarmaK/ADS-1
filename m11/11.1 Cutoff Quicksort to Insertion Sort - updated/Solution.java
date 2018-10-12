@@ -1,6 +1,7 @@
 
 /**.
  * imports Scanner package
+ * @author Viswas
  */
 import java.util.Scanner;
 /**.
@@ -9,12 +10,10 @@ import java.util.Scanner;
 import java.util.Arrays;
 /**
  * Class for solution.
- * 
  */
 public final class Solution {
     /**.
      * Constructs the object for class solution
-     * @author Viswas
      */
     private Solution() {
 
