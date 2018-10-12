@@ -1,5 +1,6 @@
 /**.
  * { imports Scanner package }
+ * @author Viswas
  */
 import java.util.Scanner;
 /**.
@@ -17,7 +18,7 @@ public final class Solution {
 
     }
     /**.
-     * { main function }
+     * { main function }reading input from the user.
      *
      * @param      args  The arguments
      */
