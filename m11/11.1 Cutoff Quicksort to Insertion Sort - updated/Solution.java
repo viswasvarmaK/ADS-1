@@ -14,7 +14,7 @@ import java.util.Arrays;
 public final class Solution {
     /**.
      * Constructs the object for class solution
-     * @author teja
+     * @author Viswas
      */
     private Solution() {
 
