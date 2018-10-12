@@ -10,7 +10,6 @@ class Insertion {
 	 * @param      a     { comparable array }
 	 */
 	public static void sort(final Comparable[] a) {
-		//
 		int N = a.length;
 		for (int i = 0; i < N; i++) {
 			for (int j = i; j > 0; j--) {
