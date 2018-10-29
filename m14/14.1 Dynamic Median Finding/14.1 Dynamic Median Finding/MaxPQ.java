@@ -1,34 +1,33 @@
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.NoSuchElementException;
-
 /**
- *  The {@code MaxPQ} class represents a priority queue of generic keys.
- *  It supports the usual <em>insert</em> and <em>delete-the-maximum</em>
- *  operations, along with methods for peeking at the maximum key,
- *  testing if the priority queue is empty, and iterating through
- *  the keys.
- *  <p>
- *  This implementation uses a binary heap.
- *  The <em>insert</em> and <em>delete-the-maximum</em> operations take
- *  logarithmic amortized time.
- *  The <em>max</em>, <em>size</em>, and <em>is-empty</em> operations take constant time.
- *  Construction takes time proportional to the specified capacity or the number of
- *  items used to initialize the data structure.
- *  <p>
- *  For additional documentation, see <a href="https://algs4.cs.princeton.edu/24pq">Section 2.4</a> of
- *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
- *
- *  @author Robert Sedgewick
- *  @author Kevin Wayne
- *
- *  @param <Key> the generic type of key on this priority queue
+ * imports comparator class
  */
-
+import java.util.Comparator;
+/**
+ * imports Iterator class
+ */
+import java.util.Iterator;
+/**
+ * Imports no such exception class
+ */
+import java.util.NoSuchElementException;
+/**
+ * Class for maximum pq.
+ *
+ * @param      <Key>  The key
+ */
 public class MaxPQ<Key> implements Iterable<Key> {
-    private Key[] pq;                    // store items at indices 1 to n
-    private int n;                       // number of items on priority queue
-    private Comparator<Key> comparator;  // optional comparator
+    /**
+     * store items at indices 1 to n
+     */
+    private Key[] pq;
+    /**
+     * number of items on priority queue
+     */
+    private int n;
+    /**
+     * optional comparator
+     */
+    private Comparator<Key> comparator;  
 
     /**
      * Initializes an empty priority queue with the given initial capacity.
@@ -72,7 +71,7 @@ public class MaxPQ<Key> implements Iterable<Key> {
     /**
      * Initializes a priority queue from the array of keys.
      * Takes time proportional to the number of keys, using sink-based heap construction.
-     *
+     *Time complexiry is N because of for loops executed at N times
      * @param  keys the array of keys
      */
     public MaxPQ(Key[] keys) {
@@ -89,7 +88,7 @@ public class MaxPQ<Key> implements Iterable<Key> {
 
     /**
      * Returns true if this priority queue is empty.
-     *
+     *Time complexiry is 1 because only one statement is executed at once
      * @return {@code true} if this priority queue is empty;
      *         {@code false} otherwise
      */
@@ -99,25 +98,28 @@ public class MaxPQ<Key> implements Iterable<Key> {
 
     /**
      * Returns the number of keys on this priority queue.
-     *
+     *Time complexiry is 1 because only one statement is executed at once
      * @return the number of keys on this priority queue
      */
     public int size() {
         return n;
     }
-
     /**
-     * Returns a largest key on this priority queue.
+     * * Returns a largest key on this priority queue.
+     *Time complexiry is 1 because only one statement is executed at once
      *
-     * @return a largest key on this priority queue
-     * @throws NoSuchElementException if this priority queue is empty
+     * @return     { returns maximum value of maxPQ}
      */
     public Key max() {
         if (isEmpty()) throw new NoSuchElementException("Priority queue underflow");
         return pq[1];
     }
-
-    // helper function to double the size of the heap array
+    /**.
+     *Returns a largest key on this priority queue.
+     *Time complexiry is 1 because only one statement is executed at once
+     *
+     * @param      capacity  The capacity
+     */
     private void resize(int capacity) {
         assert capacity > n;
         Key[] temp = (Key[]) new Object[capacity];
@@ -130,7 +132,7 @@ public class MaxPQ<Key> implements Iterable<Key> {
 
     /**
      * Adds a new key to this priority queue.
-     *
+     *Time complexiry is logN because of swim function is executed logN times
      * @param  x the new key to add to this priority queue
      */
     public void insert(Key x) {
@@ -146,7 +148,7 @@ public class MaxPQ<Key> implements Iterable<Key> {
 
     /**
      * Removes and returns a largest key on this priority queue.
-     *
+     *Time complexiry is logN because of sink function is executed logN times
      * @return a largest key on this priority queue
      * @throws NoSuchElementException if this priority queue is empty
      */
@@ -165,14 +167,22 @@ public class MaxPQ<Key> implements Iterable<Key> {
    /***************************************************************************
     * Helper functions to restore the heap invariant.
     ***************************************************************************/
-
+    /**
+     * swim function it generally moves the element to upwards.
+     * Time complixity is N because of while loop
+     * @param      k     { key type}
+     */
     private void swim(int k) {
         while (k > 1 && less(k/2, k)) {
             exch(k, k/2);
             k = k/2;
         }
     }
-
+    /**
+     * sink function it generally moves the elements to downwards
+     * Time complexity is N because of while loop 
+     * @param      k     {key type }
+     */
     private void sink(int k) {
         while (2*k <= n) {
             int j = 2*k;
@@ -186,6 +196,14 @@ public class MaxPQ<Key> implements Iterable<Key> {
    /***************************************************************************
     * Helper functions for compares and swaps.
     ***************************************************************************/
+   /**
+    * compares two objects and returns true or false
+    * time complexity is 1 because all the statements are executed only once
+    * @param      i     { index of array element }
+    * @param      j     { index of array element}
+    *
+    * @return     { returns true if condition is satified or false }
+    */
     private boolean less(int i, int j) {
         if (comparator == null) {
             return ((Comparable<Key>) pq[i]).compareTo(pq[j]) < 0;
@@ -194,19 +212,34 @@ public class MaxPQ<Key> implements Iterable<Key> {
             return comparator.compare(pq[i], pq[j]) < 0;
         }
     }
-
+    /**
+     * swaps the two elements of the pq
+     * Time complexity is 1 because only once the statements are executed
+     * @param      i     { index of comparable array}
+     * @param      j     { index of comparable array}
+     */
     private void exch(int i, int j) {
         Key swap = pq[i];
         pq[i] = pq[j];
         pq[j] = swap;
     }
 
-    // is pq[1..N] a max heap?
+    /**
+     * Determines if maximum heap.
+     * Time complexity is constant as each statement is executed only once
+     * @return     True if maximum heap, False otherwise.
+     */
     private boolean isMaxHeap() {
         return isMaxHeap(1);
     }
-
-    // is subtree of pq[1..n] rooted at k a max heap?
+    /**
+     * Determines if maximum heap.
+     * is subtree of pq[1..n] rooted at k a max heap?
+     * Time complexity is N as it is recursive function
+     * @param      k     { k of int type}
+     *
+     * @return     True if maximum heap, False otherwise.
+     */
     private boolean isMaxHeap(int k) {
         if (k > n) return true;
         int left = 2*k;
@@ -254,20 +287,5 @@ public class MaxPQ<Key> implements Iterable<Key> {
             return copy.delMax();
         }
     }
-
-    // /**
-    //  * Unit tests the {@code MaxPQ} data type.
-    //  *
-    //  * @param args the command-line arguments
-    //  */
-    // public static void main(String[] args) {
-    //     MaxPQ<String> pq = new MaxPQ<String>();
-    //     while (!StdIn.isEmpty()) {
-    //         String item = StdIn.readString();
-    //         if (!item.equals("-")) pq.insert(item);
-    //         else if (!pq.isEmpty()) StdOut.print(pq.delMax() + " ");
-    //     }
-    //     StdOut.println("(" + pq.size() + " left on pq)");
-    // }
 
 }
