@@ -5,11 +5,12 @@ import java.util.Scanner;
 /**.
  * This class is used to find the nth taxicab numbers
  * which can be formed with m pairs.
- * @author Viswas.
+ * 
  */
 public final class Solution {
 
 	/**
+	 *@author Viswas.
 	 * Default Constructor.
 	 */
 	private Solution() {
