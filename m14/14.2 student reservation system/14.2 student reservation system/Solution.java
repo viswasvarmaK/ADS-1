@@ -1,30 +1,48 @@
-/**
- *@author Viswas
- * main class that reads the user input
- */ 
-import java.util.Scanner;
-/**
- * Class for solution.
+/**.
+ * { impots scanner pakcage }
  */
-class Solution {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		int nostudents = scan.nextInt();
-		int vacany = scan.nextInt();
-		int unreserved = scan.nextInt();
-		int bc = scan.nextInt();
-		int sc = scan.nextInt();
-		int st = scan.nextInt();
-		scan.nextLine();
-		Student[] students = new Student[nostudents];
-		for (int i = 0; i < students.length; i++) {
-            String[] tokens = scan.nextLine().split(",");
-           students[i++] = new Student(tokens[0], tokens[1],Integer.parseInt(tokens[2]),Integer.parseInt(tokens[3]),Integer.parseInt(tokens[4]),Integer.parseInt(tokens[5]),tokens[6]);
-		}
-		Heap.sort(students);
-		for(Student s : students) {
-			System.out.println(s.toString());
-		}
-
-	}
+import java.util.Scanner;
+/**.
+ * { solution for class}
+ */
+public final class Solution {
+    /**.
+     * Constructs the object.
+     * @author Viswas
+     */
+    private Solution() {
+        
+    }
+    // time complexity for the main method is N
+    // Because there is one for loop.
+    // for loop iterates until N times.
+    /**.
+     * { main funciton which takes input from user }
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner sc = new Scanner(System.in);
+        HeapSort sort = new HeapSort();
+        int n = sc.nextInt();
+        int noOfVacancies = sc.nextInt();
+        int vac1 = sc.nextInt();
+        int vac2 = sc.nextInt();
+        int vac3 = sc.nextInt();
+        int vac4 = sc.nextInt();
+        sc.nextLine();
+        for (int i = 0; i < n; i++) {
+            String line = sc.nextLine();
+            String[] tokens = line.split(",");
+            Student student = new Student(tokens[0], tokens[1],
+             Integer.parseInt(tokens[2]), Integer.parseInt(tokens[2 + 1]),
+             Integer.parseInt(tokens[2 + 2]), Integer.parseInt(
+                tokens[2 + 2 + 1]), tokens[2 + 2 + 2]);
+            sort.add(student);
+        }
+        sort.sort();
+        System.out.println(sort.toString());
+        sort.vacancy1(vac1);
+        sort.vacancy2(vac1, vac2, vac3, vac4);
+    }
 }
