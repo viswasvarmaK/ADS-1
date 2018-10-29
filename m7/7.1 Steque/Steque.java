@@ -39,8 +39,9 @@ class Steque {
      */
     public void push(final String item) {
         Node newnode = new Node(item);
-        if (head == null)
+        if (head == null) {
             tail = newnode;
+        }
         newnode.next = head;
         head = newnode;
     }
