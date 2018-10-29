@@ -8,14 +8,15 @@ import java.util.Scanner;
  */
 public final class Solution  {
     /**.
-     * It will read the input from the user.
+     * Constructs the object for Solution
      * @author Viswas
      */
     private Solution() {
 
     }
     /**.
-     * main function
+     * main function which is used to see if
+     * the heap is Minheap or not
      *
      * @param      args  The arguments
      */
@@ -35,9 +36,9 @@ public final class Solution  {
         case "Integer" :
             while (n > 0) {
                 String[] token = scan.nextLine().split(",");
-                Integer[] integerarray = new Integer[token.length];
+                Integer[] integerarray = new Integer[token.length + 1];
                 for (int i = 0; i < token.length; i++) {
-                    integerarray[i] = Integer.parseInt(token[i]);
+                    integerarray[i + 1] = Integer.parseInt(token[i]);
                 }
                 MinPQ<Integer> data = new MinPQ<Integer>(integerarray);
                 System.out.println(data.isMinPQ());
@@ -46,14 +47,15 @@ public final class Solution  {
             break;
         case "Float" :
             while (n > 0) {
-                if (key.equals("")) {
+                String input = scan.nextLine();
+                if (input.equals("")) {
                     System.out.println("false");
                     break;
                 }
-                String[] token = scan.nextLine().split(",");
-                Float[] floatarray = new Float[token.length];
+                String[] token = input.split(",");
+                Float[] floatarray = new Float[token.length + 1];
                 for (int i = 0; i < token.length; i++) {
-                    floatarray[i] = Float.parseFloat(token[i]);
+                    floatarray[i + 1] = Float.parseFloat(token[i]);
                 }
                 MinPQ<Float> data = new MinPQ<Float>(floatarray);
                 System.out.println(data.isMinPQ());
@@ -63,17 +65,17 @@ public final class Solution  {
         case "Double" :
             while (n > 0) {
                 String[] token = scan.nextLine().split(",");
-                Double[] doublearray = new Double[token.length];
+                Double[] doublearray = new Double[token.length + 1];
                 for (int i = 0; i < token.length; i++) {
-                    doublearray[i] = Double.parseDouble(token[i]);
+                    doublearray[i + 1] = Double.parseDouble(token[i]);
                 }
                 MinPQ<Double> data = new MinPQ<Double>(doublearray);
                 System.out.println(data.isMinPQ());
                 n--;
             }
             break;
-            default:
-                break;
+        default:
+            break;
         }
     }
 }
